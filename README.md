@@ -11,36 +11,12 @@ pip install transformers datasets torch scikit-learn pandas
 ```
 
 ## Структура проекта
-```
 - **email_classififcation_25.ipynb**: скрипт для обучения модели кдассификации email на Spam или Ham и примера предсказания
-- **tokenizer.json**: токенизатор
 - **emailTextsI.csv**: датасет с текстами писем и метками
-- **tokenizer.json**: токенизатор
+- **spam_classifier/**: Папка для сохраненной обученной модели
 - **emailTextsI.csv**: датасет с текстами писем и метками
 - **README.md**
-│-- data/
-│   ├── emailTextsI.csv  # Датасет с текстами писем и метками
-│-- models/
-│   ├── saved_model/     # Папка для сохраненной обученной модели
-│-- scripts/
-│   ├── train.py         # Скрипт для обучения модели
-│   ├── predict.py       # Скрипт для предсказания классов
-│-- README.md
-```
 
-## Обучение модели
-Для обучения модели выполните команду:
-```bash
-python scripts/train.py
-```
-Скрипт загрузит данные, предобработает их, обучит модель и сохранит её в папке `models/saved_model/`.
-
-## Использование модели
-Для классификации нового письма выполните команду:
-```bash
-python scripts/predict.py --text "Ваш текст письма"
-```
-Скрипт загрузит сохраненную модель и выведет результат классификации.
 
 ## Почему выбрана AutoModelForSequenceClassification?
 `AutoModelForSequenceClassification` была выбрана по следующим причинам:
