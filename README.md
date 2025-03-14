@@ -12,7 +12,7 @@ pip install transformers datasets torch scikit-learn pandas
 
 ## Структура проекта
 - **email_classififcation_25.ipynb**: скрипт для обучения модели кдассификации email на Spam или Ham и примера предсказания
-- **emailTextsI.csv**: датасет с текстами писем и метками
+- **data/**: папка с датасетами с текстами писем и метками
 - **spam_classifier/**: папка для сохраненной обученной модели
 - **README.md**
 
